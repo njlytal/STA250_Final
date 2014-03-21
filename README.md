@@ -15,4 +15,5 @@ dogcat_class.R    # Classification methods used
 
 # ***** PICTURES *****
 glm_curve.png     # Represents the classification curve for penalized GLM
+
 rf_error.png      # Shows error rate for random forests given the number of trees
