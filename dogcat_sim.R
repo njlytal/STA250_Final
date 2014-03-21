@@ -1,6 +1,5 @@
 # dogcat_sim.R
-# THIS IS THE UPDATED dogcat_sim.R (formerly dogcat_sim2.R)
-# THAT PRODUCES 250 JOBS OF 100 FILES EACH.
+# This job array comprises 250 jobs of 100 files each.
 
 HSVConvert = function(file)
 {
@@ -103,11 +102,7 @@ HSVfeatures = function(col=5, row=5, t=c(8,8,8), N=250, jpeg)
             # For one row of the cell vector
             # Considers row r, column c, and slice s
             # t[s] is used to determine the table sizes
-            
-            # NOTE: Design a function to apply over the 2500 individual pixels
-            # to avoid a costly loop. See whether any values exist and get a
-            # matrix of T/F values
-            # May need to re-index hsv.array data
+
             # End result: 2500x512 vector: each column is a combination of
             # table values.
             
@@ -223,14 +218,8 @@ if (sim_num < (jobs/2))
     img.list = ((sim_num-(jobs/2))*batch.size):(((sim_num+1-(jobs/2))*batch.size) - 1)
 }
 
-# Simulation datasets numbered 1001-1200
-
 ########################################################################################
 ########################################################################################
-
-
-#################################################
-
 
 # Identifies all jpg files in the directory
 library("jpeg")
@@ -257,7 +246,7 @@ for(i in 1:batch.size)
 outdir <- "data/"
 outfile_data <- paste0(outdir,"hsvfeat.job.", sim_num, ".csv")
 
-# How do we actually want to save this list?
+# We save the data through this code
 write.table(results.mat,file=outfile_data,sep=",",quote=FALSE,row.names=FALSE,col.names=FALSE)
 
 
