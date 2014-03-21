@@ -3,10 +3,6 @@
 # Contains miscellaneous data conversion code not
 # present in the R file submitted to Gauss for conversion
 
-
-# From dog_cat.R
-
-
 # ****** Initial Image Conversion ******
 
 library(jpeg)

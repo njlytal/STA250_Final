@@ -248,6 +248,3 @@ outfile_data <- paste0(outdir,"hsvfeat.job.", sim_num, ".csv")
 
 # We save the data through this code
 write.table(results.mat,file=outfile_data,sep=",",quote=FALSE,row.names=FALSE,col.names=FALSE)
-
-
-
