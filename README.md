@@ -6,9 +6,11 @@ Code, report, and data for classifying a large number of images into two categor
 
 # ***** CODE FILES *****
 dogcat_sim.R      # File submitted to Gauss for computation
+
 dogcat_sim.sh     # File submitted to Gauss to handle the array job
 
 dogcat_misc.R     # Misc. code such as initial data conversion & recombining
+
 dogcat_class.R    # Classification methods used
 
 # ***** PICTURES *****
